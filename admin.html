@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Katy Lapucci</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+    
+    <!-- Admin Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">KATY.</a>
+            <span class="admin-tag">ADMIN</span>
+        </div>
+        
+        <nav class="admin-nav">
+            <a href="#dashboard" class="admin-nav-item active" data-section="dashboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                Dashboard
+            </a>
+            <a href="#portfolio" class="admin-nav-item" data-section="portfolio">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                Portfolio
+            </a>
+            <a href="#blog" class="admin-nav-item" data-section="blog">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Blog Posts
+            </a>
+            <a href="#settings" class="admin-nav-item" data-section="settings">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                General Settings
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <button class="logout-btn">Logout</button>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="admin-content">
+        
+        <!-- Dashboard Section -->
+        <section id="section-dashboard" class="admin-section active">
+            <header class="section-header">
+                <h1>Overview</h1>
+                <p>Statistics for your portfolio</p>
+            </header>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Images</h3>
+                    <p class="stat-number" id="count-portfolio">24</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Blog Posts</h3>
+                    <p class="stat-number" id="count-blog">8</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Profile Views</h3>
+                    <p class="stat-number">1.2k</p>
+                </div>
+            </div>
+            
+            <div class="recent-activity card">
+                <h3>Recent Blog Posts</h3>
+                <div class="item-list">
+                    <div class="list-item">
+                        <span>How to stay model-ready</span>
+                        <span class="date">Feb 01, 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="section-portfolio" class="admin-section">
+            <header class="section-header">
+                <h1>Manage Portfolio</h1>
+                <button class="btn btn-primary" id="open-upload-modal">+ Add New Image</button>
+            </header>
+            
+            <div class="admin-gallery-grid" id="admin-gallery">
+                <!-- Gallery items will be populated here -->
+                <div class="gallery-admin-item">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="Item">
+                    <div class="item-actions">
+                        <span class="category-tag">Portrait</span>
+                        <button class="btn-delete">&times;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="section-blog" class="admin-section">
+            <header class="section-header">
+                <h1>Manage Blog</h1>
+                <button class="btn btn-primary" id="btn-open-editor">+ New Article</button>
+            </header>
+            
+            <div class="blog-admin-list card">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="blog-table-body">
+                        <tr>
+                            <td>5 Tips for Your First Photoshoot</td>
+                            <td>Fashion</td>
+                            <td>Feb 01, 2026</td>
+                            <td>
+                                <button class="btn-small">Edit</button>
+                                <button class="btn-small delete">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Blog Editor Section -->
+        <section id="section-editor" class="admin-section">
+            <header class="section-header">
+                <div class="header-with-back">
+                    <button class="btn-back" id="btn-back-to-blog">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    </button>
+                    <h1>Create New Article</h1>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-secondary">Save Draft</button>
+                    <button class="btn btn-primary">Publish Post</button>
+                </div>
+            </header>
+
+            <div class="editor-container card">
+                <!-- Meta Info -->
+                <div class="editor-meta">
+                    <input type="text" class="editor-title-input" placeholder="Enter Article Title..." id="post-title">
+                    
+                    <div class="editor-meta-grid">
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select id="post-category">
+                                <option value="Fashion">Fashion</option>
+                                <option value="Lifestyle">Lifestyle</option>
+                                <option value="Behind the Scenes">Behind the Scenes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Featured Image URL</label>
+                            <input type="text" id="post-featured-img" placeholder="https://...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="editor-divider"></div>
+
+                <!-- Editor.js container -->
+                <div id="editorjs" class="editorjs-wrapper"></div>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="section-settings" class="admin-section">
+            <header class="section-header">
+                <h1>General Settings</h1>
+                <button class="btn btn-primary">Save Changes</button>
+            </header>
+            
+            <div class="settings-form card">
+                <div class="form-group">
+                    <label>Professional Name</label>
+                    <input type="text" value="Katy Lapucci">
+                </div>
+                <div class="form-group">
+                    <label>Base Location</label>
+                    <input type="text" value="ROME & WORLDWIDE">
+                </div>
+                <div class="form-group">
+                    <label>About Excerpt (Index Page)</label>
+                    <textarea rows="3">Discover the fusion of timeless elegance and contemporary style through my lens.</textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Instagram URL</label>
+                        <input type="text" placeholder="https://instagram.com/...">
+                    </div>
+                    <div class="form-group">
+                        <label>TikTok URL</label>
+                        <input type="text" placeholder="https://tiktok.com/...">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Biography (Full)</label>
+                    <textarea rows="6">Full biography text here...</textarea>
+                </div>
+            </div>
+
+            <div class="card settings-categories">
+                <h3>Portfolio Categories</h3>
+                <p class="form-desc">Manage the categories shown in your portfolio filtering tags.</p>
+                
+                <div class="category-manager">
+                    <div id="category-list" class="category-tags-container">
+                        <!-- Categories will be rendered here -->
+                        <span class="manage-tag">Portrait <button class="remove-tag">&times;</button></span>
+                        <span class="manage-tag">Fashion <button class="remove-tag">&times;</button></span>
+                        <span class="manage-tag">B&W <button class="remove-tag">&times;</button></span>
+                        <span class="manage-tag">Bikini <button class="remove-tag">&times;</button></span>
+                    </div>
+                    
+                    <div class="add-category-input">
+                        <input type="text" id="new-category-name" placeholder="New category name...">
+                        <button type="button" class="btn btn-small" id="btn-add-category">Add</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Upload Modal -->
+    <div id="upload-modal" class="admin-modal">
+        <div class="modal-content card">
+            <div class="modal-header">
+                <h2>Add Portfolio Image</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="portfolio-upload-form">
+                <div class="form-group">
+                    <label>Upload Method</label>
+                    <div class="upload-tabs">
+                        <button type="button" class="tab-btn active" data-target="file-input-group">Local File</button>
+                        <button type="button" class="tab-btn" data-target="url-input-group">Image URL</button>
+                    </div>
+                </div>
+
+                <div id="file-input-group" class="upload-method-group active">
+                    <div class="file-drop-area">
+                        <input type="file" id="img-file" accept="image/*">
+                        <div class="drop-msg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                            <span>Click or Drag & Drop image</span>
+                        </div>
+                        <img id="upload-preview" src="" alt="Preview" style="display:none;">
+                    </div>
+                </div>
+
+                <div id="url-input-group" class="upload-method-group">
+                    <div class="form-group">
+                        <input type="text" id="img-url" placeholder="Paste image URL here">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="img-category" required>
+                        <option value="Portrait">Portrait</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="B&W">B&W</option>
+                        <option value="Bikini">Bikini</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Upload to Portfolio</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Simple Login Modal (Placeholder for Firebase Auth) -->
+    <div id="login-overlay" class="login-overlay active">
+        <div class="login-card card">
+            <h2>Katy Admin</h2>
+            <p>Please login to continue</p>
+            <div class="form-group">
+                <input type="email" placeholder="Email" id="login-email">
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password" id="login-password">
+            </div>
+            <button class="btn btn-primary" id="btn-login" style="width: 100%;">Login</button>
+        </div>
+    </div>
+
+    <!-- Editor.js & Tools -->
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/image@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/quote@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/link@latest"></script>
+    
+    <script src="js/admin.js"></script>
+</body>
+</html>
